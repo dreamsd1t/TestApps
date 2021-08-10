@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ko">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+   <link rel="stylesheet" type="text/css" href="css/common.css">
+   <link rel="stylesheet" href="css/dc_style.css"/>
+   <link rel="stylesheet" href="css/swiper.css">
+
+   <script src="js/jquery-1.11.1.min.js"></script>
+   <script src="js/common.js"></script>
+   <script src="js/jquery-autoclear.min.js"></script>
+   <script src="js/jquery-select.js"></script>
+   <script src="js/jquery.bxslider.js"></script>
+   <script src="js/swiper.min.js"></script>
+   <!--클라이언트-->
+   <script src="js/DreamAuthClient.js"></script>
+   <!--안드로이드 우측 버튼 비활성-->
+   <script>
+       $(document).bind("contextmenu", function (e) {
+           return false;
+       });
+   </script>
+
+   <title>드림인증</title>
+</head>
+
+<body>
+   <div class="wrap">
+      <!--content-->
+      <div class="main_wrap">
+         <div class="main_box">
+            <div class="main_intro">
+               <img src="images/intro_img01.png" alt="한번 발급으로 3년간 안전하고 편리하게 사용하세요">
+            </div>
+            <div class="main_intro">
+               <img src="images/intro_img02.png" alt="간편한본인인증, 안전한 전자서명, 편리한 로그인">
+            </div>
+            <div class="main_intro">
+               <img src="images/intro_img03.png" alt="발급은 간단하게 step1 휴대폰 본인인증, step2 1원 계좌인증, step3 발급완료">
+            </div>
+            <div class="main_swiper">
+               <div class="swiper-container">
+                  <div class="swiper-wrapper">
+                     <div class="swiper-slide" style="background:#30A1E3 url(images/guide_img01.png) no-repeat center top; background-size: contain;">
+                        <!--<div class="guide_txt_wrap"><span class="guide_txt_s">발급받은 인증서로</span><br><span class="guide_txt">서명 시작</span></div>-->
+                     </div>
+                     <div class="swiper-slide" style="background:#3062e3 url(images/guide_img02.png) no-repeat center bottom; background-size: contain;">
+                        <!--<div class="guide_txt_wrap"><span class="guide_txt">QR코드로 샥!</span></div>-->
+                     </div>
+                     <div class="swiper-slide" style="background:#6F30E3 url(images/guide_img03.png) no-repeat center bottom; background-size: contain;">
+                        <!--<div class="guide_txt_wrap"><span class="guide_txt">QR코드로 샥!</span></div>-->
+                     </div>
+                     <div class="swiper-slide" style="background:#4ACAB1 url(images/guide_img04.png) no-repeat center bottom; background-size: contain;">
+                        <!--<div class="guide_txt_wrap"><span class="guide_txt_s">생체인증으로 안전하게</span><br><span class="guide_txt">본인인증</span></div>-->
+                     </div>
+                     <div class="swiper-slide" style="background:#4956c9 url(images/guide_img05.png) no-repeat center bottom; background-size: contain;">
+                        <!--<div class="guide_txt_wrap"><span class="guide_txt_s">안전하고 간편하게</span><br><span class="guide_txt">서명 완료!</span></div>-->
+                     </div>
+                  </div>
+                  <!-- Add Pagination -->
+                  <div class="swiper-pagination"></div>
+               </div>
+
+            </div>
+            <div class="main_intro">
+               <img src="images/intro_img05.png" alt="다양한 서비스에서 이용할 수 있어요. 각종 신청서, 계약서, 동의서등의 전자문서에 전자서명, 인증서를 통해 공공 및 금융기관 등 ">
+            </div>
+
+            <!--인증서 사용처-->
+            <div class="place_banner">
+               <div class="banner_tit">인증서 사용처</div>
+               <div id="s_banner_wrap">
+                  <ul class="bxslider_03">
+                     <li class="banner_a1"><img src="images/place_img01.png" alt="인증서 사용처1"/></li>
+                     <li class="banner_a2"><img src="images/place_img01.png" alt="인증서 사용처2"/></li>
+                     <li class="banner_a3"><img src="images/place_img01.png" alt="인증서 사용처3"/></li>
+                     <li class="banner_a4"><img src="images/place_img01.png" alt="인증서 사용처4"/></li>
+                  </ul>
+               </div>
+            </div>
+            <!--//인증서 사용처-->
+            <!--인증서 발급-->
+            <div class="place_issue" id="place_issue">
+               <div class="issue_tit">지금 바로 경험해 보세요!</div>
+               <div>
+                 <button class="issue_btn" onclick="moveToIssue()">발급하러 가기</button>
+               </div>
+            </div>
+            <!--//인증서 발급-->
+            <!--고객지원-->
+            <div class="support_box">
+               <ul>
+                  <li onclick="moveToOtherPage('자주 묻는 질문', 'faq.html')">
+                     <span class="support_icon"><img src="images/icon_qna.png" alt="자주묻는질문 아이콘"></span>
+                     <span class="support_txt">자주 묻는 질문</span>
+                     <span class="support_view"><img src="images/icon_more.png" alt="더보기"></span>
+                  </li>
+                  <li onclick="moveToOtherPage('제휴 문의', 'partner.html')">
+                     <span class="support_icon"><img src="images/icon_partner.png" alt="제휴문의 아이콘"></span>
+                     <span class="support_txt">제휴문의</span>
+                     <span class="support_view"><img src="images/icon_more.png" alt="더보기"></span>
+                  </li>
+                  <li onclick="moveToOtherPage('고객센터', 'customer.html')">
+                     <span class="support_icon"><img src="images/icon_cusotmer.png" alt="고객센터 아이콘"></span>
+                     <span class="support_txt">고객센터</span>
+                     <span class="support_view"><img src="images/icon_more.png" alt="더보기"></span>
+                  </li>
+               </ul>
+            </div>
+            <!--//고객지원-->
+            <!--푸터-->
+            <div class="main_footer">
+               <ul>
+                  <li onclick="moveToOtherPage('서비스 이용약관', 'agree/agree.html')">서비스 이용약관</li>
+                  <li onclick="moveToOtherPage('개인정보처리방침', 'policy/privacy.html')">개인정보처리방침</li>
+               </ul>
+            </div>
+            <!--//푸터-->
+         </div>
+      </div>
+      <!-- //content -->
+   </div>
+
+   <!-- Initialize Swiper -->
+   <script>
+      var swiper = new Swiper('.swiper-container', {
+         pagination: '.swiper-pagination',
+         paginationClickable: true,
+         paginationBulletRender: function (swiper, index, className) {
+            return '<span class="' + className + '">' + '</span>';
+         }
+      });
+
+      $(document).ready(function(){
+         "use strict";
+         $('.bxslider').bxSlider({
+            auto: true, mode:'fade',
+         });
+         $('.bxslider_03').bxSlider({
+            auto: true,controls:false,pager:false,maxSlides: 3,moveSlides:1,  slideWidth: 100,slideMargin:0,autoHover:true,
+         });
+
+      });
+
+      function hideIssueButton() {
+         // 인증서가 발급 완료되면 이 javascript 함수를 호출하겠습니다.
+         // 여기서 "지금 바로 경험해 보세요!" 문구와 "발급하러 가기" 버튼을 숨길도록 처리해주시면 될 것 같습니다.
+
+         $("#place_issue").css("display","none");
+
+      }
+   </script>
+
+</body>
+</html>

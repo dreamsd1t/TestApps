@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ko">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" type="text/css" href="css/common.css">
+   <link rel="stylesheet" href="css/dc_style.css"/>
+   <!--클라이언트-->
+   <script src="js/DreamAuthClient.js"></script>
+   <title>고객센터</title>
+</head>
+
+<body>
+   <div class="wrap">
+      <!--content-->
+      <div class="content_wrap">
+         <div class="content_box">
+
+            <div class="customer_box">
+               <div class="customer_tit">
+                  이용하시면서 불편한 점이 있으신가요?
+               </div>
+               <div class="customer_txt">
+                  자주 묻는 질문을 통해 해결하지 못한 점이 있으시면<br>이메일 또는 전화로 문의주세요!
+                  <span>(평일9-18시/주말,공휴일 휴무)</span>
+               </div>
+               <div class="customer_num">
+                  <div class="customer_icon"><img src="images/icon_mail.png" alt="이메일 아이콘"/></div>
+                  <ul>
+                     <li class="customer_tit_s">이메일 문의</li>
+                     <li class="customer_copy" onclick="copyToPasteBoardNShowToast('ds.help@dreamsecurity.com', '이메일 주소가 복사 되었습니다')">ds.help@dreamsecurity.com</li>
+                     <li class="customer_info_txt">터치하면 이메일 주소가 복사됩니다.</li>
+                  </ul>
+               </div>
+               <div class="customer_info">
+                  <div class="customer_icon"><img src="images/icon_call.png" alt="전화 아이콘"/></div>
+                  <ul>
+                    <li class="customer_tit_s">전화 문의</li>
+                     <li><a href="tel:1588-0000">1588-0000</a></li>
+                     <li class="customer_info_txt">터치하면 전화로 연결됩니다.</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+      <!-- //content -->
+      <!--footer-->
+      <div class="footer_wrap">
+         <button class="btn_box" onclick="moveToOtherPage('자주묻는질문', 'faq.html')"><img src="images/icon_faq.png" alt="자주 묻는 질문 아이콘"/><span class="space_R5"></span>자주 묻는 질문 확인하기</button>
+      </div>
+      <!--footer-->
+   </div>
+
+</body>
+</html>
